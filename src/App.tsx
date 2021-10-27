@@ -52,6 +52,11 @@ function App() {
             setEdit(true)
         }
 
+        function handleCancelEditUser(e: any) {
+            e.preventDefault();
+            setEdit(false)
+        }
+
         function handleSaveUser(e: any) {
             e.preventDefault();
             const form: TUser = f2o(e.target) as TUser;
@@ -80,7 +85,7 @@ function App() {
                 {Object.keys(User).map((field) => <UserCell key={field} item={props.item}
                                                             field={field as keyof TUser}/>)}
                 <div className="col">
-                    {edit ? <button onClick={() => setEdit(false)}>Cancel</button> :
+                    {edit ? <button onClick={e => handleCancelEditUser(e)}>Cancel</button> :
                         <button onClick={() => handleDeleteUser(props.item)} className="btn-delete">Delete</button>}
                 </div>
                 <div className="col">
