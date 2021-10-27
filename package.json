@@ -11,6 +11,8 @@
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "axios": "^0.24.0",
+    "form-to-obj": "^0.0.3",
+    "form-to-object": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -19,7 +21,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "BROWSER=none react-scripts start",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
